@@ -3,7 +3,7 @@
 
 ## AnyKernel setup
 # EDIFY properties
-kernel.string=AH Kernel Installer by CallMeAldy
+kernel.string=AK Kernel Installer by CallMeAldy
 do.devicecheck=1
 do.initd=1
 do.modules=1
@@ -159,6 +159,9 @@ chmod -R 766 $initd
 backup_file default.prop;
 replace_string default.prop "ro.adb.secure=0" "ro.adb.secure=1" "ro.adb.secure=0";
 replace_string default.prop "ro.secure=0" "ro.secure=1" "ro.secure=0";
+
+# remove mpdecsion binary
+mv $bindir/mpdecision $bindir/mpdecision-rm
 
 # end ramdisk changes
 
