@@ -155,6 +155,9 @@ dump_boot;
 cp -fp $patch/init.d/* $initd
 chmod -R 766 $initd
 
+# add ak logo
+cp -vr ../extras/aklogo.rle .
+
 # adb secure
 backup_file default.prop;
 replace_string default.prop "ro.adb.secure=0" "ro.adb.secure=1" "ro.adb.secure=0";
